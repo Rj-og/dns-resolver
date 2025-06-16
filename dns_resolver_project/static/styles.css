@@ -1,0 +1,130 @@
+/* ✨ Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #111;
+    --box-bg: #111827;
+    --arrow-color: #333;
+    --hex-bg: #222;
+}
+
+body.dark {
+    --bg-color: #0e0e0e;
+    --text-color: #eee;
+    --box-bg: #1f2937;
+    --arrow-color: #aaa;
+    --hex-bg: #101010;
+}
+
+/* 🌐 Input & Button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e4bb5;
+}
+
+/* ☁️ Results */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.result-box {
+    background-color: var(--box-bg);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.result-box.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 🎯 Arrow */
+.arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--arrow-color);
+    margin: 5px 0;
+    animation: bounce 1s infinite alternate;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.arrow.show {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(10px); }
+}
+
+/* 🔐 Hex Dump */
+.hex-dump {
+    font-family: 'Courier New', monospace;
+    background-color: var(--hex-bg);
+    color: #0f0;
+    user-select: text;
+    word-break: break-all;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* 🌙 Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}

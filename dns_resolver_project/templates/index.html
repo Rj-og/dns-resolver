@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Resolver - Flowchart View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="theme-toggle">🌞</div>
+
+    <h1>DNS Resolver - Flowchart View</h1>
+
+    <div class="input-container">
+        <input type="text" id="domain-input" placeholder="Enter domain or IP">
+        
+        <select id="record-type">
+            <option value="A">A</option>
+            <option value="MX">MX</option>
+            <option value="TXT">TXT</option>
+            <option value="NS">NS</option>
+        </select>
+
+        <select id="dns-server">
+            <option value="8.8.8.8">Google (8.8.8.8)</option>
+            <option value="1.1.1.1">Cloudflare (1.1.1.1)</option>
+            <option value="9.9.9.9">Quad9 (9.9.9.9)</option>
+        </select>
+
+        <label style="display: flex; align-items: center; gap: 5px;">
+            <input type="checkbox" id="reverse-toggle">
+            Reverse Lookup?
+        </label>
+
+        <button id="resolve-btn">Resolve</button>
+    </div>
+
+    <div id="results" class="result-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
