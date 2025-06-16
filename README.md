@@ -1,4 +1,4 @@
-dns-resolver
+
 🌐 DNS Resolver – Flowchart View (Full-Stack) An advanced DNS Resolver tool built using Python and Web Technologies, allowing users to visualize DNS resolution like never before. This project simulates DNS resolution from Root to Authoritative Servers, supports multiple query types (A, MX, TXT, NS), and features a clean, intuitive flowchart-based web UI for better understanding of how domain names are translated into IP addresses.
 
 ✨ Features 🌍 Supports DNS Query Types: A, MX, TXT, NS
